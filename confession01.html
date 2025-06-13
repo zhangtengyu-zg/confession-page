@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>给陈佳佳的告白</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        love: {
+                            light: '#FFD1DC',
+                            DEFAULT: '#FF69B4',
+                            dark: '#C71585'
+                        },
+                        heart: {
+                            light: '#FFB6C1',
+                            DEFAULT: '#FF1493',
+                            dark: '#DB7093'
+                        }
+                    },
+                    fontFamily: {
+                        romantic: ['"Great Vibes"', 'cursive'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        heartbeat: {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '25%': { transform: 'scale(1.2)' },
+                            '40%': { transform: 'scale(1)' },
+                            '60%': { transform: 'scale(1.2)' },
+                            '80%': { transform: 'scale(1)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                        heartbeat: 'heartbeat 1.5s ease-in-out infinite',
+                        fadeIn: 'fadeIn 1s ease-in-out forwards',
+                        slideUp: 'slideUp 0.7s ease-out forwards'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .text-shadow-lg {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            }
+            .bg-gradient-love {
+                background: linear-gradient(135deg, #FF69B4 0%, #C71585 100%);
+            }
+            .bg-glass {
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+            }
+            .bg-love-pattern {
+                background-image: radial-gradient(#FF69B4 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+        }
+    </style>
+    
+    <!-- 引入字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-b from-pink-50 to-purple-100 overflow-x-hidden bg-love-pattern">
+    <!-- 粒子背景容器 -->
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    
+    <!-- 主内容 -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center p-4">
+        <!-- 标题区域 -->
+        <div class="mb-8 text-center opacity-0 animate-fadeIn" style="animation-delay: 0.3s">
+            <h1 class="text-[clamp(2.5rem,8vw,4rem)] font-romantic text-love-dark text-shadow-lg mb-2">给陈佳佳的告白</h1>
+            <p class="text-[clamp(1rem,3vw,1.25rem)] font-poppins text-purple-600">来自张腾宇的真心</p>
+        </div>
+        
+        <!-- 表白卡片容器 -->
+        <div class="w-full max-w-md opacity-0 animate-slideUp" style="animation-delay: 0.6s">
+            <!-- 步骤1：欢迎页面 -->
+            <div id="step-1" class="bg-glass rounded-2xl shadow-xl p-8 transition-all duration-500">
+                <div class="text-center mb-6">
+                    <div class="inline-block p-3 rounded-full bg-love-light/50 mb-4">
+                        <i class="fa fa-heart text-love-dark text-3xl animate-heartbeat"></i>
+                    </div>
+                    <h2 class="text-2xl font-poppins font-semibold text-love-dark mb-2">亲爱的陈佳佳</h2>
+                    <p class="text-gray-700">请接收张腾宇的告白</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-800">
+                    <p class="text-lg leading-relaxed">
+                        从第一次见到你的那一刻起，我的心就被你深深吸引。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        你的笑容如同春日的阳光，温暖而明亮；你的眼睛像深邃的湖水，让我不由自主地沉醉其中。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        每一天能见到你，对我来说都是最美好的时刻。你的存在让我的世界变得更加丰富多彩。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        我想告诉你，我喜欢你，不仅仅是因为你的外表，更是因为你独特的个性和善良的内心。
+                    </p>
+                    <p class="text-lg leading-relaxed font-medium text-love-dark">
+                        你愿意做我的女朋友吗？
+                    </p>
+                </div>
+                
+                <div class="mt-8 flex space-x-4">
+                    <button id="accept-btn" class="flex-1 bg-gradient-love text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg hover:shadow-pink-200/50 transform hover:-translate-y-1 transition-all duration-300">
+                        愿意
+                    </button>
+                    <button id="deny-btn" class="flex-1 bg-white text-love-dark font-medium py-3 px-4 rounded-lg border border-pink-200 hover:bg-pink-50 transform hover:-translate-y-1 transition-all duration-300">
+                        考虑一下
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 步骤2：接受后的页面 -->
+            <div id="step-2" class="hidden bg-glass rounded-2xl shadow-xl p-8 transition-all duration-500">
+                <div class="text-center mb-6">
+                    <div class="inline-block p-3 rounded-full bg-love-light/50 mb-4">
+                        <i class="fa fa-heart text-love-dark text-3xl animate-heartbeat"></i>
+                    </div>
+                    <h2 class="text-2xl font-poppins font-semibold text-love-dark mb-2">太开心了！</h2>
+                    <p class="text-gray-700">我们终于在一起了</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-800 text-center">
+                    <p class="text-lg leading-relaxed">
+                        谢谢你接受我的心意，这是我人生中最幸福的时刻。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        我会用我的全部真心去爱护你，陪伴你度过每一个美好的时刻。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        让我们一起创造属于我们的美好回忆吧！
+                    </p>
+                    
+                    <div class="mt-6">
+                        <div class="inline-flex items-center p-3 rounded-full bg-love-light/50">
+                            <i class="fa fa-heart text-love-dark text-4xl animate-heartbeat"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <p class="text-sm text-gray-600">—— 永远爱你的张腾宇</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <button id="share-btn" class="w-full bg-gradient-love text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg hover:shadow-pink-200/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        <i class="fa fa-share-alt mr-2"></i>
+                        分享这份喜悦
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 步骤3：拒绝后的页面 -->
+            <div id="step-3" class="hidden bg-glass rounded-2xl shadow-xl p-8 transition-all duration-500">
+                <div class="text-center mb-6">
+                    <div class="inline-block p-3 rounded-full bg-love-light/50 mb-4">
+                        <i class="fa fa-heart-o text-love-dark text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-poppins font-semibold text-love-dark mb-2">别拒绝我呀</h2>
+                    <p class="text-gray-700">再给我一次机会吧</p>
+                </div>
+                
+                <div class="space-y-4 text-gray-800 text-center">
+                    <p class="text-lg leading-relaxed">
+                        我知道可能有些突然，但这是我深思熟虑后的决定。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        希望你能再给我一次机会，让我证明我的真心。
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        不管你做什么决定，我都尊重你，也感谢你给我这个表达的机会。
+                    </p>
+                    
+                    <div class="mt-6">
+                        <img src="https://picsum.photos/id/237/200/200" alt="可爱的小狗" class="mx-auto rounded-full shadow-lg h-32 w-32 object-cover">
+                        <p class="mt-2 text-sm text-gray-600">连狗狗都在为我加油呢~</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex space-x-4">
+                    <button id="accept-btn-2" class="flex-1 bg-gradient-love text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg hover:shadow-pink-200/50 transform hover:-translate-y-1 transition-all duration-300">
+                        好吧，答应你
+                    </button>
+                    <button id="deny-btn-2" class="flex-1 bg-white text-love-dark font-medium py-3 px-4 rounded-lg border border-pink-200 hover:bg-pink-50 transform hover:-translate-y-1 transition-all duration-300">
+                        还是再考虑
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="mt-12 text-center text-gray-500 text-sm opacity-0 animate-fadeIn" style="animation-delay: 0.9s">
+            <p>❤️ 张腾宇 ❤️ 陈佳佳 ❤️</p>
+        </div>
+    </div>
+    
+    <!-- 粒子特效库 -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- 微信分享支持 -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    
+    <!-- 主脚本 -->
+    <script>
+        // 初始化粒子背景
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#FF69B4" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "grab" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                },
+                modes: {
+                    grab: { distance: 140, line_linked: { opacity: 0.5 } },
+                    push: { particles_nb: 4 }
+                }
+            },
+            retina_detect: true
+        });
+        
+        // DOM元素
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const step3 = document.getElementById('step-3');
+        const acceptBtn = document.getElementById('accept-btn');
+        const denyBtn = document.getElementById('deny-btn');
+        const acceptBtn2 = document.getElementById('accept-btn-2');
+        const denyBtn2 = document.getElementById('deny-btn-2');
+        const shareBtn = document.getElementById('share-btn');
+        
+        // 处理接受按钮点击
+        acceptBtn.addEventListener('click', function() {
+            step1.classList.add('hidden');
+            step2.classList.remove('hidden');
+            step2.classList.add('animate-fadeIn');
+            
+            // 添加更多心形粒子效果
+            createHeartParticles();
+            
+            // 播放心跳音效（模拟）
+            playHeartbeatSound();
+        });
+        
+        // 处理拒绝按钮点击
+        denyBtn.addEventListener('click', function() {
+            step1.classList.add('hidden');
+            step3.classList.remove('hidden');
+            step3.classList.add('animate-fadeIn');
+        });
+        
+        // 第二次接受按钮点击
+        acceptBtn2.addEventListener('click', function() {
+            step3.classList.add('hidden');
+            step2.classList.remove('hidden');
+            step2.classList.add('animate-fadeIn');
+            
+            // 添加更多心形粒子效果
+            createHeartParticles();
+            
+            // 播放心跳音效（模拟）
+            playHeartbeatSound();
+        });
+        
+        // 第二次拒绝按钮点击
+        denyBtn2.addEventListener('click', function() {
+            // 按钮会"逃跑"
+            this.classList.add('animate-pulse');
+            this.style.position = 'relative';
+            
+            let x = 0, y = 0;
+            const moveInterval = setInterval(() => {
+                x = Math.random() * 100 - 50;
+                y = Math.random() * 100 - 50;
+                this.style.transform = `translate(${x}px, ${y}px)`;
+            }, 300);
+            
+            // 几秒钟后停止移动
+            setTimeout(() => {
+                clearInterval(moveInterval);
+                this.style.transform = 'translate(0, 0)';
+                this.classList.remove('animate-pulse');
+            }, 5000);
+        });
+        
+        // 分享按钮点击
+        shareBtn.addEventListener('click', function() {
+            // 显示微信分享提示
+            showWechatShareTip();
+        });
+        
+        // 创建心形粒子效果
+        function createHeartParticles() {
+            const heartCount = 20;
+            const container = document.querySelector('.relative.z-10');
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fa fa-heart"></i>';
+                heart.className = 'absolute text-love-dark';
+                
+                // 随机大小
+                const size = Math.random() * 24 + 12;
+                heart.style.fontSize = `${size}px`;
+                
+                // 随机位置（从底部向上）
+                const x = Math.random() * 100;
+                const y = 100;
+                heart.style.left = `${x}%`;
+                heart.style.bottom = `${y}%`;
+                
+                // 随机动画持续时间
+                const duration = Math.random() * 5 + 3;
+                
+                container.appendChild(heart);
+                
+                // 动画
+                heart.animate([
+                    { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+                    { transform: `translate(${Math.random() * 100 - 50}px, -${Math.random() * 300 + 200}px) scale(0.5)`, opacity: 0 }
+                ], {
+                    duration: duration * 1000,
+                    easing: 'ease-out'
+                });
+                
+                // 动画结束后移除元素
+                setTimeout(() => {
+                    container.removeChild(heart);
+                }, duration * 1000);
+            }
+        }
+        
+        // 播放心跳音效（模拟）
+        function playHeartbeatSound() {
+            // 这里可以添加真实的音频播放代码
+            // 由于浏览器安全限制，直接播放音频可能需要用户交互
+            console.log("播放心跳音效");
+        }
+        
+        // 显示微信分享提示
+        function showWechatShareTip() {
+            // 创建遮罩层
+            const overlay = document.createElement('div');
+            overlay.className = 'fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center';
+            
+            // 创建提示内容
+            const tipContent = document.createElement('div');
+            tipContent.className = 'bg-white rounded-lg p-6 max-w-md mx-4';
+            
+            const tipTitle = document.createElement('h3');
+            tipTitle.className = 'text-xl font-bold text-love-dark mb-4';
+            tipTitle.textContent = '分享给朋友';
+            
+            const tipText = document.createElement('p');
+            tipText.className = 'text-gray-700 mb-6';
+            tipText.textContent = '点击右上角"..."按钮，选择"发送给朋友"或"分享到朋友圈"';
+            
+            const tipImage = document.createElement('img');
+            tipImage.src = 'https://picsum.photos/id/237/200/200'; // 这里可以替换为微信分享指引图片
+            tipImage.alt = '微信分享指引';
+            tipImage.className = 'w-full h-auto rounded-md mb-4';
+            
+            const closeButton = document.createElement('button');
+            closeButton.className = 'w-full bg-gradient-love text-white font-medium py-3 px-4 rounded-lg hover:shadow-lg hover:shadow-pink-200/50 transform hover:-translate-y-1 transition-all duration-300';
+            closeButton.textContent = '我知道了';
+            closeButton.addEventListener('click', () => {
+                document.body.removeChild(overlay);
+            });
+            
+            // 组装提示内容
+            tipContent.appendChild(tipTitle);
+            tipContent.appendChild(tipText);
+            tipContent.appendChild(tipImage);
+            tipContent.appendChild(closeButton);
+            
+            // 添加到页面
+            overlay.appendChild(tipContent);
+            document.body.appendChild(overlay);
+        }
+        
+        // 初始化微信分享（如果在微信环境中）
+        function initWechatShare() {
+            if (typeof wx !== 'undefined') {
+                // 这里应该调用后端接口获取微信JSSDK配置
+                // 由于这是前端代码，我们模拟一个配置
+                const wxConfig = {
+                    debug: false,
+                    appId: 'your_app_id',
+                    timestamp: 123456789,
+                    nonceStr: 'noncestr',
+                    signature: 'signature',
+                    jsApiList: ['onMenuShareAppMessage', 'onMenuShareTimeline']
+                };
+                
+                // 实际使用时，需要从后端获取正确的配置
+                wx.config(wxConfig);
+                
+                wx.ready(() => {
+                    // 分享给朋友
+                    wx.onMenuShareAppMessage({
+                        title: '张腾宇向陈佳佳的告白',
+                        desc: '张腾宇向陈佳佳表达爱意，点击查看详情',
+                        link: window.location.href,
+                        imgUrl: 'https://picsum.photos/id/237/200/200', // 替换为实际分享图标
+                        success: function() {
+                            alert('分享成功！');
+                        },
+                        cancel: function() {
+                            alert('已取消分享');
+                        }
+                    });
+                    
+                    // 分享到朋友圈
+                    wx.onMenuShareTimeline({
+                        title: '张腾宇向陈佳佳的告白',
+                        link: window.location.href,
+                        imgUrl: 'https://picsum.photos/id/237/200/200', // 替换为实际分享图标
+                        success: function() {
+                            alert('分享成功！');
+                        },
+                        cancel: function() {
+                            alert('已取消分享');
+                        }
+                    });
+                });
+            }
+        }
+        
+        // 检查是否在微信环境中
+        function isWechat() {
+            const ua = navigator.userAgent.toLowerCase();
+            return ua.indexOf('micromessenger') !== -1;
+        }
+        
+        // 如果在微信环境中，初始化微信分享
+        if (isWechat()) {
+            initWechatShare();
+        }
+    </script>
+</body>
+</html>
